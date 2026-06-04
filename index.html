@@ -397,6 +397,10 @@ body::after {
 #year-grid { padding: 0 0 24px 0; }
 
 /* ── RESPONSIVE ── */
+@media(min-width: 769px) {
+  #cal-month-view { padding: 0 24px; }
+  #cal-year-view { padding: 0; }
+}
 @media(max-width: 768px) {
   .app { padding: 0 16px 80px; }
   .top-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
@@ -567,7 +571,7 @@ body::after {
 
 </div>
 <!-- CALENDAR -->
-<div class="panel" id="panel-calendar"><div style="padding:0 0 40px 0">
+<div class="panel" id="panel-calendar"><div style="padding:0 0 60px 0">
 
 <!-- VIEW TOGGLE -->
 <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px">
@@ -579,7 +583,7 @@ body::after {
 </div>
 
 <!-- MONTH VIEW -->
-<div id="cal-month-view" style="padding:0 4px">
+<div id="cal-month-view" style="padding:0 24px">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap;padding:0 4px">
     <button onclick="calPrev()" style="width:34px;height:34px;border-radius:50%;background:var(--s2);border:1px solid var(--b2);color:var(--text);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0">‹</button>
     <div style="font-size:16px;font-weight:800;min-width:150px;text-align:center" id="cal-title">June 2026</div>
@@ -637,12 +641,12 @@ body::after {
 
 <!-- YEAR VIEW -->
 <div id="cal-year-view" style="display:none">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;padding:0 24px">
     <button onclick="yearPrev()" style="width:34px;height:34px;border-radius:50%;background:var(--s2);border:1px solid var(--b2);color:var(--text);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">‹</button>
     <div style="font-size:20px;font-weight:800" id="year-title">2026</div>
     <button onclick="yearNext()" style="width:34px;height:34px;border-radius:50%;background:var(--s2);border:1px solid var(--b2);color:var(--text);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">›</button>
   </div>
-  <div id="year-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 0 20px 0"></div>
+  <div id="year-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:0 24px 40px 24px"></div>
 </div>
 
 </div>
